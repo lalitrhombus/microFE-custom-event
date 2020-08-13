@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>MS POC for Communication</title>
+    <script src="../node_modules//stencil-component-poc/dist/stencil-component-poc.js"></script>
+
+    <script>
+      var cartValue = 0;
+      window.addEventListener('PRODUCTS_MF_PRODUCT_ADDED', ()=>{
+        cartValue = cartValue + 1;
+        console.log("i am keeping track of custom event from htm page",cartValue);
+        //document.getElementById();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <my-component
+      first="Stencil"
+      last="Loaded from outside in html and i say we have <> element in cart"
+    ></my-component>
+  </body>
+</html>
